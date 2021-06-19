@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SocketWebServiceService } from 'src/app/Services/socket-web-service.service';
 
 @Component({
   selector: 'app-room',
@@ -10,7 +11,7 @@ export class RoomComponent implements OnInit {
 
   username: string;
 
-  constructor(private router:Router) {
+  constructor(private router:Router, private socketService: SocketWebServiceService) {
     this.username = '';
    }
 
