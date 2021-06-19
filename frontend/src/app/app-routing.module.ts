@@ -5,11 +5,11 @@ import { RoomComponent } from './components/room/room.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'room', component: RoomComponent },
+  { path: 'room', component: RoomComponent, },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

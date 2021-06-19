@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ export class HomeComponent implements OnInit {
 
   username: string;
 
-  constructor() {
+  constructor(private router: Router) {
     this.username = '';
    }
 
@@ -21,6 +22,7 @@ export class HomeComponent implements OnInit {
       alert("Please enter a valid username!!!");
       return;
     }
+    this.router.navigateByUrl('/room', {state: {username: this.username}});
   }
 
 }
