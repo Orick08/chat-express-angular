@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  username: string;
+
+  constructor() {
+    this.username = '';
+   }
 
   ngOnInit(): void {
+  }
+
+  onEnter(){
+    if(this.username === ''){
+      alert("Please enter a valid username!!!");
+      return;
+    }
   }
 
 }
